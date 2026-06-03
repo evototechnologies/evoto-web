@@ -36,7 +36,7 @@ export default function Hero() {
       </div>
 
       {/* Overlay — darker in dark mode, lighter tint in light mode */}
-      <div className="absolute inset-0 bg-[var(--c-bg)]/75" />
+      <div className="absolute inset-0 bg-black/65" />
 
       {/* Subtle grid on top of overlay */}
       <div className="absolute inset-0 bg-grid" />
@@ -68,7 +68,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--c-accent)] text-[#0A0A0A] text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300 active:scale-[0.98] group"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--c-accent)] text-white text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300 active:scale-[0.98] group"
           >
             View Projects
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />

@@ -75,7 +75,7 @@ export default async function ServicePage({ params }: Props) {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--c-accent)] text-[#0A0A0A] text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--c-accent)] text-white text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300"
           >
             Get a Free Consultation
           </Link>
@@ -145,7 +145,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--c-accent)] text-[#0A0A0A] text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--c-accent)] text-white text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300"
             >
               Request a Quote
             </Link>

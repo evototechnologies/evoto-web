@@ -41,8 +41,7 @@ const themeScript = `
 (function(){
   try {
     var s = localStorage.getItem('evoto-theme');
-    var p = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', s || p || 'dark');
+    document.documentElement.setAttribute('data-theme', s || 'light');
   } catch(e) {}
 })();
 `
@@ -53,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="light">
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <OrganizationSchema />

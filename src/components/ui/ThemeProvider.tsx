@@ -8,12 +8,11 @@ type ThemeCtx = { theme: Theme; toggle: () => void }
 const ThemeContext = createContext<ThemeCtx>({ theme: 'dark', toggle: () => {} })
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const [theme, setTheme] = useState<Theme>('light')
 
   useEffect(() => {
     const stored = localStorage.getItem('evoto-theme') as Theme | null
-    const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-    const initial = stored ?? preferred
+    const initial = stored ?? 'light'
     setTheme(initial)
     document.documentElement.setAttribute('data-theme', initial)
   }, [])

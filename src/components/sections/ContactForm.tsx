@@ -134,7 +134,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state === 'loading'}
-        className="w-full flex items-center justify-center gap-2 py-4 bg-[var(--c-accent)] text-[#0A0A0A] text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full flex items-center justify-center gap-2 py-4 bg-[var(--c-accent)] text-white text-sm font-medium tracking-wide hover:bg-[var(--c-accent-h)] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {state === 'loading' ? (
           <><Loader2 size={16} className="animate-spin" />Sending...</>

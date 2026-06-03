@@ -50,7 +50,7 @@ export default function ProjectsSection({ preview = false }: Props) {
                   onClick={() => setActiveCategory(cat.slug)}
                   className={`px-4 py-1.5 text-xs tracking-wide border transition-all duration-200 ${
                     activeCategory === cat.slug
-                      ? 'border-[var(--c-accent)] bg-[var(--c-accent)] text-[#0A0A0A]'
+                      ? 'border-[var(--c-accent)] bg-[var(--c-accent)] text-white'
                       : 'border-[var(--c-border)] text-[var(--c-muted)] hover:border-[var(--c-accent)]/50 hover:text-[var(--c-text)]'
                   }`}
                 >
@@ -126,7 +126,7 @@ export default function ProjectsSection({ preview = false }: Props) {
           <div className="mt-12 text-center">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-[var(--c-accent)] text-[var(--c-accent)] text-sm font-medium tracking-wide hover:bg-[var(--c-accent)] hover:text-[#0A0A0A] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-[var(--c-accent)] text-[var(--c-accent)] text-sm font-medium tracking-wide hover:bg-[var(--c-accent)] hover:text-white transition-all duration-300"
             >
               View All Projects
             </Link>

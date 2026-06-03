@@ -18,11 +18,11 @@ const base =
 
 const variants = {
   primary:
-    'bg-accent text-[#0A0A0A] hover:bg-[#E8C98A] active:scale-[0.98]',
+    'bg-[var(--c-accent)] text-white hover:bg-[var(--c-accent-h)] active:scale-[0.98]',
   outline:
-    'border border-accent text-accent hover:bg-accent hover:text-[#0A0A0A] active:scale-[0.98]',
+    'border border-[var(--c-accent)] text-[var(--c-accent)] hover:bg-[var(--c-accent)] hover:text-white active:scale-[0.98]',
   ghost:
-    'text-[#F5F5F0] hover:text-accent underline-offset-4 hover:underline',
+    'text-[var(--c-text)] hover:text-[var(--c-accent)] underline-offset-4 hover:underline',
 }
 
 const sizes = {

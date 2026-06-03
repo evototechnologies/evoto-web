@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Tailwind tokens — reference runtime CSS vars so theme toggle works */
 @theme {
   --color-accent: var(--c-accent);
   --color-surface: var(--c-surface);
@@ -11,30 +10,30 @@
   --font-sans: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* ─── Dark theme (default) ─── */
+/* ─── Light theme — default (Microsoft style) ─── */
 :root {
-  --c-bg:        #0A0A0A;
-  --c-surface:   #141414;
-  --c-surface-h: #1A1A1A;
-  --c-accent:    #008029;
-  --c-accent-h:  #00A334;
-  --c-text:      #F5F5F0;
-  --c-muted:     #888888;
-  --c-faint:     #555555;
-  --c-border:    #2A2A2A;
+  --c-bg:        #FFFFFF;
+  --c-surface:   #F5F5F5;
+  --c-surface-h: #EBEBEB;
+  --c-accent:    #0067B8;
+  --c-accent-h:  #005A9E;
+  --c-text:      #1B1B1B;
+  --c-muted:     #616161;
+  --c-faint:     #8A8886;
+  --c-border:    #D1D1D1;
 }
 
-/* ─── Light theme ─── */
-[data-theme="light"] {
-  --c-bg:        #F2F7F5;
-  --c-surface:   #FFFFFF;
-  --c-surface-h: #EDFAF4;
-  --c-accent:    #008029;
-  --c-accent-h:  #006B22;
-  --c-text:      #1C1C1C;
-  --c-muted:     #555555;
-  --c-faint:     #999999;
-  --c-border:    #D1E8DF;
+/* ─── Dark theme ─── */
+[data-theme="dark"] {
+  --c-bg:        #1B1B1B;
+  --c-surface:   #2C2C2C;
+  --c-surface-h: #383838;
+  --c-accent:    #479EF5;
+  --c-accent-h:  #2899F5;
+  --c-text:      #FFFFFF;
+  --c-muted:     #B3B3B3;
+  --c-faint:     #767676;
+  --c-border:    #404040;
 }
 
 *,
@@ -59,21 +58,20 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ─── Heading scale (Loxone-inspired: large, light weight, tight leading) ─── */
+/* ─── Heading scale — Microsoft semi-bold style ─── */
 h1 {
-  font-weight: 300;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-}
-h2 {
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
+h2 {
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
 h3 {
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
 p {
@@ -84,7 +82,7 @@ p {
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Logo inversion — original logo is dark, needs to be light on dark backgrounds */
+/* Logo — invert in dark mode only */
 .logo-img {
   filter: none;
 }
@@ -98,9 +96,9 @@ p {
 ::-webkit-scrollbar-thumb  { background: var(--c-border); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--c-accent); }
 
-/* Gradient text */
+/* Accent gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, var(--c-accent) 0%, var(--c-accent-h) 50%, var(--c-accent) 100%);
+  background: linear-gradient(135deg, var(--c-accent) 0%, var(--c-accent-h) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -112,8 +110,5 @@ p {
     linear-gradient(var(--c-border) 1px, transparent 1px),
     linear-gradient(90deg, var(--c-border) 1px, transparent 1px);
   background-size: 60px 60px;
-  opacity: 0.35;
-}
-[data-theme="light"] .bg-grid {
-  opacity: 0.5;
+  opacity: 0.25;
 }
