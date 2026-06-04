@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+// scrolled state removed — navbar is always solid white
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Phone } from 'lucide-react'
@@ -15,29 +16,13 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
   useEffect(() => { setMenuOpen(false) }, [pathname])
 
-  const isHome = pathname === '/'
-  const solid = scrolled || !isHome
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-400 ${
-        solid
-          ? 'bg-[var(--c-bg)] border-b border-[var(--c-border)] shadow-sm'
-          : 'bg-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-40 bg-[var(--c-bg)] border-b border-[var(--c-border)] shadow-sm">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
 
         {/* Logo */}
